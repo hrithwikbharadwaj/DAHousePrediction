@@ -36,6 +36,11 @@ body {
 ol, ul {
 	list-style: none;
 }
+a, a:active, a:focus{
+
+	outline: none; 
+
+}
 
 blockquote, q {
 	quotes: none;

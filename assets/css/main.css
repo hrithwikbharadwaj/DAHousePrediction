@@ -2170,6 +2170,11 @@ input, select, textarea {
 		margin-top: -0.8em;
 		line-height: 1.75em;
 	}
+	a, a:active, a:focus{
+
+        outline: none; 
+
+    }
 
 	header h4 + p,
 	header h5 + p,

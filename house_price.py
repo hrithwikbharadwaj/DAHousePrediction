@@ -19,14 +19,14 @@ X = data.drop('Price', axis=1)
 y = data['Price']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 1)
+print(data.dtypes)
+# start = time.time()
+# mlp = MLPRegressor(hidden_layer_sizes=(100,100,100), activation="relu", batch_size=10, learning_rate_init=0.001, max_iter=400, random_state=1)
+# mlp.fit(X_train, y_train)
+# end = time.time()
+# # print(end-start)
 
-start = time.time()
-mlp = MLPRegressor(hidden_layer_sizes=(100,100,100), activation="relu", batch_size=10, learning_rate_init=0.001, max_iter=400, random_state=1)
-mlp.fit(X_train, y_train)
-end = time.time()
-# print(end-start)
+# pred = mlp.predict(X_test)
+# print(r2_score(y_test, pred))
 
-pred = mlp.predict(X_test)
-print(r2_score(y_test, pred))
-
-joblib.dump(mlp, 'house_price.sav')
+# joblib.dump(mlp, 'house_price.sav')

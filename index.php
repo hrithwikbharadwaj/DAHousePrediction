@@ -6,10 +6,8 @@
 		
 		$years_old = $_GET['years_old'];
 		$floor = $_GET['floor'];
-
 		$jsonf = "'{\"data\":[$location,$bhk,$sq_ft,$years_old,$floor]}'";
 		$shells = "/usr/bin/python3 -W ignore /var/www/html/house_price_predict.py $jsonf";
-
 		$result = exec($shells);
 	}
 ?>
@@ -123,19 +121,29 @@
 										<div class="col-12">
 											<ul class="actions">
 												<li><input type="submit" value="Submit" name='submit' class="primary" /></li>
-												<li><input type="reset" value="Reset" /></li>
+												<li ><a href="/"><input type="button"  value="Reset" ></li></a> 
 											</ul>
 										</div>
 									</div>
 								</form>
+								<style>
+
+    a, a:active, a:focus{
+
+		outline: none; 
+		border: 0; 
+
+    }
+
+</style>
 								
 								
                                 <h3>Prediction Results Displayed Below </h3>
-								<pre><code> Rs.<mark id='pred'><?php echo $result ?></mark></code></pre>
+								<h2><code> Rs.<mark id='pred'><?php echo $result ?></mark></code></h2>
 
 	
 
 							</section>
 
 
-</html>                            
+</html>     
